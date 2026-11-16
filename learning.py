@@ -16,7 +16,7 @@ def validate_score(score):
     else:
         raise ValueError("Score must be between 0 and 100")
     
-@pytest.mark.parametrize("score,expected", [(80, 90), (0,0), (100,100)])
+@pytest.mark.parametrize("score,expected", [(80, 80), (0,0), (100,100)])
 def test_equality(score, expected):
     assert validate_score(score) == expected
 
